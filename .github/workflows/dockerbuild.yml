@@ -19,13 +19,20 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '>=3.11'
-          cache: 'poetry'
+          python-version: '3.11'
+          cache: poetry
 
-      - name: Install Poetry
+      - name: Install Poetry (using pip)
+        run: |
+          pip install poetry
+          echo "$(python3 -m site --user-base)/bin" >> $GITHUB_PATH
+
+
+      - name: Verify Poetry Installation
+        run: poetry --version
+
+      - name: Install Dependencies
         run: poetry install
 
       - name: Run Tests
         run: poetry run invoke test
-        env:
-          PATH: ${{ env.PATH }}
