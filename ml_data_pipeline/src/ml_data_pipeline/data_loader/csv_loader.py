@@ -16,4 +16,7 @@ class CSVLoader(DataLoader):
         ]
         data = pd.get_dummies(data, columns=categorical_cols, drop_first=True)
 
+        int_columns = data.select_dtypes(include=['integer']).columns
+        data[int_columns] = data[int_columns].astype(float)
+
         return data
