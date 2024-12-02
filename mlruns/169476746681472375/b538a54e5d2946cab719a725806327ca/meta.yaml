@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Masters AI/Semester 3/Software Engineering for AI/Project/Solution/mlops_project_mhmdjawadahamd_jreigefinianos/ml_data_pipeline/mlruns/169476746681472375/b538a54e5d2946cab719a725806327ca/artifacts
+end_time: 1733097363691
+entry_point_name: ''
+experiment_id: '169476746681472375'
+lifecycle_stage: active
+run_id: b538a54e5d2946cab719a725806327ca
+run_name: valuable-moose-829
+run_uuid: b538a54e5d2946cab719a725806327ca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733097361435
+status: 3
+tags: []
+user_id: Admin

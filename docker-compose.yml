@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  ml_pipeline:
+    build:
+      context: .
+    ports:
+      - "8000:8000"  # Expose Prometheus metrics endpoint
+    depends_on:
+      - prometheus
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"  # Prometheus web interface
